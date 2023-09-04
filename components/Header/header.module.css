@@ -1,0 +1,41 @@
+
+.header{
+    background:var(--primary-blue-dark);
+    height:40vh;
+}
+.nav{
+    padding:14px 40px;
+    -webkit-box-shadow: 0 2px 9px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 2px 9px 0 rgba(0,0,0,0.08);
+}
+
+.leftSection{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.rightSection{
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+}
+
+.icon{
+    margin-right:40px;
+    cursor:pointer;
+}
+.category{
+    display:flex;
+    cursor:pointer;
+}
+.categoryLabelGroup{
+    display:flex;
+    flex-direction:column;
+}
+.categoryLabel{
+    margin-left:5px;
+    font-size:0.7rem;
+}
+.cursor{
+    cursor:pointer;
+}

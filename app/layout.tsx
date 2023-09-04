@@ -1,3 +1,4 @@
+import Header from '@/components/Header'
 import type { Metadata } from 'next'
 import { Frank_Ruhl_Libre } from 'next/font/google'
 import './globals.css'
@@ -16,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={frank_Ruhl_Libre.className}>{children}</body>
+      <body className={frank_Ruhl_Libre.className}>
+        <main className='wrapper'>
+          <Header/>
+        {children}
+        </main>
+      </body>
     </html>
   )
 }
