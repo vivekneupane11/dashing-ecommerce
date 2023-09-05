@@ -1,6 +1,12 @@
 import styles from "./header.module.css";
 
-export default function Header() {
+export default async function  Header() {
+  const res = await fetch('https://fakestoreapi.com/products/categories')
+  const categories = await res.json()
+  if(!res.ok){
+    throw new Error("No Categories Found")
+  }
+  
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -97,6 +103,20 @@ export default function Header() {
           </svg>
         </section>
       </nav>
+      <section >
+            <ul className={styles.categoryLinks}>
+             {
+              categories.map((category:string)=><li key={category} className={styles.categoryLink}>{category}</li>)
+             }
+             {
+              categories.map((category:string,i:number)=><li key={category+i} className={styles.categoryLink}>{category}</li>)
+             }
+               {
+              ["Make Up","Shoes"].map((category:string,i:number)=><li key={category} className={styles.categoryLink}>{category}</li>)
+             }
+              </ul>  
+             
+          </section>
     </header>
   );
 }

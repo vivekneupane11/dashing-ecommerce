@@ -39,3 +39,20 @@
 .cursor{
     cursor:pointer;
 }
+.categoryLinks{
+    display:flex;
+    justify-content:space-around;
+    padding:20px;
+    width:80%;
+    margin:auto;
+}
+.categoryLink{
+    color:var( --text-light-gray);
+    text-transform:capitalize;
+    cursor:pointer;
+}
+.categoryLink:hover{
+    color:#fff;
+    font-weight:bold;
+    text-shadow: 2px 2px #000;
+}
