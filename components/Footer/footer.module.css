@@ -16,5 +16,22 @@ background:var(--background-gradient-dark);
     justify-content:space-between;
 }
 .footerLinks .footerTitle{
-    margin:0 10px;
+    margin:0 20px;
+    position:relative;
+
+}
+.footerTitle::after{
+    content:'';
+    position:absolute;
+    bottom:-5px;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:2px;
+    width:0px;
+    background:var(--text-light-gray);
+    transition:0.3s all ease;
+}
+
+.footerTitle:hover::after{
+    width:100%;
 }
