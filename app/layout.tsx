@@ -18,10 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={frank_Ruhl_Libre.className}>
-        <main className='wrapper'>
           <Header/>
         {children}
-        </main>
       </body>
     </html>
   )
