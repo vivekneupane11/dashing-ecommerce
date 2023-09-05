@@ -1,8 +1,8 @@
 
 export default function Home() {
   return (
- <>
- <h1>This is our ecommerce website</h1>
- </>
+<main>
+  <h1 style={{background:'red'}}>HI</h1>
+</main>
   )
 }

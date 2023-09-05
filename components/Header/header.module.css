@@ -8,7 +8,10 @@
     -webkit-box-shadow: 0 2px 9px 0 rgba(0,0,0,0.08);
     box-shadow: 0 2px 9px 0 rgba(0,0,0,0.08);
 }
-
+.heading{
+    color:#fff;
+    cursor:pointer;
+}
 .leftSection{
     display:flex;
     justify-content:center;
@@ -50,9 +53,23 @@
     color:var( --text-light-gray);
     text-transform:capitalize;
     cursor:pointer;
+    position:relative;
+}
+.categoryLink::after{
+    content:'';
+    position:absolute;
+    bottom:-5px;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:2px;
+    width:0;
+    background:var(--text-light-gray);
+    transition:0.3s all ease;
 }
 .categoryLink:hover{
     color:#fff;
-    font-weight:bold;
-    text-shadow: 2px 2px #000;
+
+}
+.categoryLink:hover::after{
+    width:100%;
 }
