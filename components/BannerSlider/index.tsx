@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import styles from "./bannerslider.module.css";
 export default function BannerSlider() {
   let settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 2000,
     autoplay: true,
