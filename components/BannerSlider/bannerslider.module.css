@@ -5,7 +5,6 @@
     
 }
 
-
 .bannerLeft{
     flex-basis: 60%;
     background: var(--background-gradient-light);
@@ -49,11 +48,11 @@
     object-position:center;
     height:330px;
  }
-.banner section{
+.bannerSection{
     display: flex;
     justify-content: space-between;
 }
-.banner strong{
+.bannerStrong{
     padding: 3px 7px;
     
     display: block;
@@ -62,16 +61,15 @@
     border-radius: 12px;
     text-align: center;
 }
-.banner article{
+.bannerArticle{
     display:flex;
     flex-direction:column;
     justify-content:space-evenly;
-    padding:2.8rem 0 2.8rem 2.8rem;
+    padding:2rem 0 2.8rem 2.8rem;
 }
-.banner article span{
+.bannerSpan{
     padding-top:20px;
 }
 .bannerHeader{
-    margin:20px 0;
     font-size:1.2rem;
 }

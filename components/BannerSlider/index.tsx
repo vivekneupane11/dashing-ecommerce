@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import banner from "@/public/bannerHome.png";
 import bannertwo from "@/public/bannertwo.png";
@@ -20,10 +19,10 @@ export default function BannerSlider() {
       {[0, 1, 2].map((e) => (
         <div key={e} className={styles.sliderBanner}>
           <div className={styles.banner}>
-            <section className={styles.bannerLeft}>
-              <article>
-                <strong>new</strong>
-                <span>New Arrivals</span>
+            <section className={`${styles.bannerSection} ${styles.bannerLeft} `}>
+              <article className={styles.bannerArticle}>
+                <strong className={styles.bannerStrong}>new</strong>
+                <span className={styles.bannerSpan}>New Arrivals</span>
                 <h6 className={styles.bannerHeader}>
                   New Designs Affordable Price
                 </h6>
@@ -35,10 +34,10 @@ export default function BannerSlider() {
                 alt="Banner"
               />
             </section>
-            <section className={styles.bannerRight}>
-              <article>
-                <strong>new</strong>
-                <span>New Arrivals</span>
+            <section className={`${styles.bannerSection} ${styles.bannerRight} `}>
+            <article className={styles.bannerArticle}>
+                <strong className={styles.bannerStrong}>new</strong>
+                <span className={styles.bannerSpan}>New Arrivals</span>
                 <h6 className={styles.bannerHeader}>
                   New Designs with Affordable Price
                 </h6>
