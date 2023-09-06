@@ -8,7 +8,7 @@ import styles from "./bannerslider.module.css";
 export default function BannerSlider() {
   let settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 2000,
     autoplay: true,
     slidesToShow: 1,
