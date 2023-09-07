@@ -32,6 +32,7 @@ export default function BannerSlider() {
                 src={bannertwo}
                 className={styles.bannerImageTwo}
                 alt="Banner"
+                priority={true}
               />
             </section>
             <section className={`${styles.bannerSection} ${styles.bannerRight} `}>
@@ -47,6 +48,8 @@ export default function BannerSlider() {
                 src={banner}
                 className={styles.bannerImages}
                 alt="Banner"
+                priority={true}
+
               />
             </section>
           </div>
