@@ -1,7 +1,7 @@
 :root {
   --primary-blue-dark: #3958d8;
-  --text-light-gray:#ddd;
-  --border-color:#fdf7f7;
+  --text-light-gray: #ddd;
+  --border-color: #fdf7f7;
   --background-gradient-light: linear-gradient(
       101.96deg,
       #2b87d4 27.24%,
@@ -35,7 +35,7 @@ body {
   margin: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position:relative;
+  position: relative;
 }
 h1,
 h2,
@@ -47,16 +47,16 @@ h5 {
 h1 {
   text-align: center;
 }
-h3{
-  font-size:1.4rem;
-  font-weight:900;
+h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
 }
 
 h5 {
   letter-spacing: 0.8px;
 }
-span{
-  color:#fff;
+span {
+  color: #fff;
 }
 a {
   text-decoration: none;
@@ -70,26 +70,55 @@ ul {
   list-style: none;
 }
 
-
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
-main{
-position:absolute;
-top: 16vh;
-background:#fff;
-width:95%;
-margin-left:2.5%;
--webkit-box-shadow: 0 2px 9px 0 rgba(0,0,0,0.08);
-box-shadow: 0 2px 9px 0 rgba(0,0,0,0.08);
+main {
+  position: absolute;
+  top: 16vh;
+  background: #fff;
+  width: 95%;
+  margin-left: 2.5%;
+  -webkit-box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
+  z-index:1;
 }
 
-
-button{
-  font-family:__Frank_Ruhl_Libre_Fallback_d63ab4, __Frank_Ruhl_Libre_Fallback_Fallback_d63ab4
+button {
+  font-family: __Frank_Ruhl_Libre_Fallback_d63ab4,
+    __Frank_Ruhl_Libre_Fallback_Fallback_d63ab4;
 }
+
+/* Overriding Slick Carousel Buttons Css Styles */
+.slick-prev:before {
+  color: #080f2d !important;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
+
+  -webkit-box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
+  font-size:28px !important;
+  padding:10px 7px;
+  z-index:6000;
+}
+.slick-next:before {
+  color: #080f2d !important;
+  z-index: 1000 !important;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
+font-size:28px !important;
+padding:10px 7px;
+z-index:6000;
+
+}
+.slick-next{
+  right:-5px !important;
+
+}
+.slick-prev{
+  z-index:1;
+}
+.sliderContainer >  .slick-prev{
+  left:-60px !important; 
+ }

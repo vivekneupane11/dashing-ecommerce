@@ -7,6 +7,8 @@ export default function Home() {
 <main>
 <BannerSlider/>
 <FeatureProducts/>
+<FeatureProducts/>
+
   <h1 >HI</h1>
   <h1 >HI</h1>
   <h1 >HI</h1>
