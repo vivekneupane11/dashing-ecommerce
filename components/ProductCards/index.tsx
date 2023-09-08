@@ -4,9 +4,10 @@ import styles from "./productcard.module.css";
 type ProductCardProps = {
 title:string,
 price:number,
-image:string
+image:string,
+category:string
 }
-export default function ProductCard({title,price,image}:ProductCardProps) {
+export default function ProductCard({title,price,image,category}:ProductCardProps) {
   return (
     <div className={styles.productCard}>
       <span className={styles.sticker}>sale</span>
@@ -23,7 +24,7 @@ export default function ProductCard({title,price,image}:ProductCardProps) {
         <strong className={styles.productPrice}>Rs: {price}</strong>
       </div>
       <div className={styles.hoverCard}>
-        <span className={styles.hoverCategory}>Watches</span>
+        <span className={styles.hoverCategory}>{category}</span>
         <div className={styles.buttonActions}>
           <span className={styles.iconWrapper}>
             <span className={styles.tooltip}>Cart</span>{" "}

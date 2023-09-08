@@ -1,4 +1,5 @@
 import BannerSlider from "@/components/BannerSlider";
+import Category from "@/components/Category";
 import FeatureProducts from "@/components/FeatureProducts";
 import Footer from "@/components/Footer";
 
@@ -10,61 +11,7 @@ export default function Home() {
 <BannerSlider/>
 <FeatureProducts title="Featured Products" />
 <FeatureProducts title="Latest Products"/>
-
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
-  <h1 >HI</h1>
+<Category/>
 
 
 <Footer/>

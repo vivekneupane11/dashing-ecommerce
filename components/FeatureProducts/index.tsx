@@ -9,13 +9,17 @@ export default function FeatureProducts({ title }: { title: string }) {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=12")
+    fetch("https://fakestoreapi.com/products?limit=18")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);
+        if(title !== 'Featured Products'){
+          setProducts(data.slice(0,12).reverse())
+        }else{
+          setProducts(data);
+        }
         setLoading(false);
       });
-  }, []);
+  }, [title]);
   const settings = {
     dots: false,
     infinite: false,
@@ -38,6 +42,7 @@ export default function FeatureProducts({ title }: { title: string }) {
             title={product.title}
             price={product.price}
             image={product.image}
+            category={product.category}
           />
         ))}
       </Slider>

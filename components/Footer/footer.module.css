@@ -1,3 +1,5 @@
+
+
 .footer{
     padding:20px 20px;
 border-top: 1px solid var(--border-color);
@@ -34,4 +36,26 @@ background:var(--background-gradient-dark);
 
 .footerTitle:hover::after{
     width:100%;
+}
+
+.footerTop{
+    display:flex;
+    background:#fffcfc
+}
+.footerSection{
+    border-right: 0;
+    padding: 1.9rem 1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.info{
+    color:#c87575;
+    margin:1.5rem 0;
+}
+.footerSectionTitle{
+    margin-top:15px;
+    font-size:1.2rem;
 }
