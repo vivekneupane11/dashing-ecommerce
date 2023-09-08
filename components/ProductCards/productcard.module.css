@@ -1,7 +1,7 @@
 .productCard {
   margin: 10px;
   padding: 10px 20px 10px 20px;
-  max-width: 220px;
+  max-width: 250px;
   -webkit-box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
   border-radius: 12px;
@@ -27,8 +27,9 @@
 }
 .productImage {
   height: 250px;
-  width: 220px;
-  object-fit: contain;
+  width: 230px;
+  object-fit: contain ;
+  border-radius:12px;
 }
 .productInfo{
     align-self:flex-start;
@@ -36,6 +37,10 @@
 .productName {
   padding: 0.5rem 0;
   font-size: 1.1rem;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  width:220px;
 }
 .productPrice {
   color: var(--primary-blue-dark);

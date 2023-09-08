@@ -1,6 +1,12 @@
 import Image from "next/image";
 import styles from "./productcard.module.css";
-export default function ProductCard() {
+
+type ProductCardProps = {
+title:string,
+price:number,
+image:string
+}
+export default function ProductCard({title,price,image}:ProductCardProps) {
   return (
     <div className={styles.productCard}>
       <span className={styles.sticker}>sale</span>
@@ -8,13 +14,13 @@ export default function ProductCard() {
         className={styles.productImage}
         width={470}
         height={670}
-        src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+        src={image}
         alt="sunglasses"
       />
 
       <div className={styles.productInfo}>
-        <h2 className={styles.productName}>Royal Enfield Watch</h2>
-        <strong className={styles.productPrice}>Rs: 1,999</strong>
+        <h2 className={styles.productName}>{title}</h2>
+        <strong className={styles.productPrice}>Rs: {price}</strong>
       </div>
       <div className={styles.hoverCard}>
         <span className={styles.hoverCategory}>Watches</span>
