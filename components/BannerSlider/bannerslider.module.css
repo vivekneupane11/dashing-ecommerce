@@ -47,6 +47,7 @@
     object-fit:contain;
     object-position:center;
     height:330px;
+    width:577px;
  }
 .bannerSection{
     display: flex;
