@@ -63,3 +63,10 @@
 .categoryContainer:hover .categoryImage {
   transform: scale(1.2);
 }
+.categoryContainer:hover .categoryInfo{
+  color:var(--primary-blue-dark);
+}
+.categoryTitle{
+  font-size:1rem;
+  text-transform:uppercase;
+}

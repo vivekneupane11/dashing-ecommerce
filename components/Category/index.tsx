@@ -7,122 +7,52 @@ import womens from "@/public/category/women-category.jpg";
 import Image from "next/image";
 import styles from "./category.module.css";
 
-export default function Category() {
+const categoryImages = [
+  mens,
+  jewellery,
+  shoes,
+  watches,
+  womens,
+  mens,
+  jewellery,
+  shoes,
+  watches,
+  womens,
+];
+export default async function Category() {
+  const res = await fetch("https://fakestoreapi.com/products/categories");
+  const categories = await res.json();
+  if (!res.ok) {
+    throw new Error("No Categories Found");
+  }
   return (
     <section className={styles.featureProducts}>
       <div className={styles.featureTitleWrapper}>
         <h3 className={styles.featureTitle}>Find Your Product</h3>
-    
       </div>
       <section className={styles.category}>
-          <Image
-            className={styles.categoryImageLeft}
-            src={image}
-            alt="banner"
-          />
+        <Image className={styles.categoryImageLeft} src={image} alt="banner" />
+        <section className={styles.categoryGrid}>
           <section className={styles.categoryGrid}>
-            <section className={styles.categoryGrid}>
-              <div className={styles.categoryContainer}>
+            {[...categories, ...categories].map((category, i) => (
+              <div key={category} className={styles.categoryContainer}>
                 <div className={styles.categoryBox}>
                   <Image
-                    src={mens}
+                    src={categoryImages[i]}
                     className={styles.categoryImage}
                     style={{ objectFit: "contain" }}
                     alt="Women Category"
                   />
                   <div className={styles.categoryInfo}>
-                    <strong>WOMEN</strong>
-                    <p>9 PRODUCTS</p>
+                    <strong className={styles.categoryTitle}>{category}</strong>
+                    <p>{Math.floor(Math.random() * 100)} PRODUCTS</p>
                   </div>
                 </div>
               </div>
-              <div className={styles.categoryContainer}>
-                <div className={styles.categoryBox}>
-                  <Image
-                    src={shoes}
-                    className={styles.categoryImage}
-                    style={{ objectFit: "contain" }}
-                    alt="Women Category"
-                  />
-                  <div className={styles.categoryInfo}>
-                    <strong>WOMEN</strong>
-                    <p>9 PRODUCTS</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.categoryContainer}>
-                <div className={styles.categoryBox}>
-                  <Image
-                    src={womens}
-                    className={styles.categoryImage}
-                    style={{ objectFit: "contain" }}
-                    alt="Women Category"
-                  />
-                  <div className={styles.categoryInfo}>
-                    <strong>WOMEN</strong>
-                    <p>9 PRODUCTS</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.categoryContainer}>
-                <div className={styles.categoryBox}>
-                  <Image
-                    src={shoes}
-                    className={styles.categoryImage}
-                    style={{ objectFit: "contain" }}
-                    alt="Women Category"
-                  />
-                  <div className={styles.categoryInfo}>
-                    <strong>WOMEN</strong>
-                    <p>9 PRODUCTS</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.categoryContainer}>
-                <div className={styles.categoryBox}>
-                  <Image
-                    src={jewellery}
-                    className={styles.categoryImage}
-                    style={{ objectFit: "contain" }}
-                    alt="Women Category"
-                  />
-                  <div className={styles.categoryInfo}>
-                    <strong>WOMEN</strong>
-                    <p>9 PRODUCTS</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.categoryContainer}>
-                <div className={styles.categoryBox}>
-                  <Image
-                    src={shoes}
-                    className={styles.categoryImage}
-                    style={{ objectFit: "contain" }}
-                    alt="Women Category"
-                  />
-                  <div className={styles.categoryInfo}>
-                    <strong>WOMEN</strong>
-                    <p>9 PRODUCTS</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.categoryContainer}>
-                <div className={styles.categoryBox}>
-                  <Image
-                    src={watches}
-                    className={styles.categoryImage}
-                    style={{ objectFit: "contain" }}
-                    alt="Women Category"
-                  />
-                  <div className={styles.categoryInfo}>
-                    <strong>WOMEN</strong>
-                    <p>9 PRODUCTS</p>
-                  </div>
-                </div>
-              </div>
-            </section>
+            ))}
           </section>
         </section>
+      </section>
     </section>
   );
 }
