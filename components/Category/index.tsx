@@ -45,7 +45,7 @@ export default async function Category() {
                   />
                   <div className={styles.categoryInfo}>
                     <strong className={styles.categoryTitle}>{category}</strong>
-                    <p>{Math.floor(Math.random() * 100)} PRODUCTS</p>
+                    <p className={styles.productCount}>{Math.floor(Math.random() * 100)} PRODUCTS</p>
                   </div>
                 </div>
               </div>
