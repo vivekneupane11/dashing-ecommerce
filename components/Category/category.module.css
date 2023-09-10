@@ -30,7 +30,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  justify-content:space-around;
+  justify-content:center;
 }
 .categoryContainer {
   margin: 5px 0;
@@ -59,7 +59,7 @@
   text-align: center;
 }
 .categoryImage {
-max-width:170px;
+max-width:150px;
   height: auto;
   transition: 0.5s all ease-in-out;
 }
@@ -76,8 +76,10 @@ max-width:170px;
 
 
 /* For Smaller Devices */
-@media(min-width:650px){
-
+@media(min-width:520px){
+.categoryImage{
+  max-width:180px;
+}
     .categoryGrid{
       padding: 0 0rem 0 1rem;
     }

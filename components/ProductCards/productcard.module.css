@@ -47,7 +47,7 @@
 }
 .hoverCard{
     position: absolute;
-   display:flex;
+   display:none;
    flex-direction:column;
    justify-content:center;
    align-items:center;
@@ -72,22 +72,7 @@
     -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
     
 }
-.productCard:hover .hoverCard{    
-    opacity:0.8;
-    transition:0.5s all ease-in-out;
 
-}
-.productCard:hover .productInfo{
-    color:#fff;
-    z-index:1000;
-}
-.productCard:hover .productPrice{
-    color:#fff;
-    z-index:1000;
-}
-.productCard:hover .productImage{
- opacity:0.7;
-}
 .buttonActions{
 display:flex;
 justify-content:space-evenly;
@@ -107,4 +92,26 @@ position:relative
   top:-25px;
 
   
+}
+
+@media (min-width:650px){
+.hoverCard{
+  display:flex;
+
+}
+.productCard:hover .hoverCard{    
+  opacity:0.8;
+
+}
+.productCard:hover .productInfo{
+  color:#fff;
+  z-index:1000;
+}
+.productCard:hover .productPrice{
+  color:#fff;
+  z-index:1000;
+}
+.productCard:hover .productImage{
+opacity:0.7;
+}
 }

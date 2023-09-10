@@ -30,7 +30,7 @@ export default function RootLayout({
   href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
 />
       </head>
-      <body tabIndex={0} className={frank_Ruhl_Libre.className}>
+      <body  className={frank_Ruhl_Libre.className}>
           <Header/>
         {children}
       </body>
