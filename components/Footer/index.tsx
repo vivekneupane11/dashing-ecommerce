@@ -102,8 +102,9 @@ export default function Footer() {
         <section className={styles.footerLinks}>
           <p className={styles.footerTitle}>Contact Us</p>
           <p className={styles.footerTitle}>About Us</p>
-          <p className={styles.footerTitle}>Contact Us</p>
-          <p className={styles.footerTitle}>About Us</p>
+          <p className={styles.footerTitle}>Support Us</p>
+          <p className={styles.footerTitle}>Shop </p>
+          <p className={styles.footerTitle}>Best Offers</p>
         </section>
       </section>
     </section>
