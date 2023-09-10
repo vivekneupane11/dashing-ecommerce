@@ -113,12 +113,12 @@ z-index:6000;
 
 }
 .slick-next{
-  right:-5px !important;
+  right:20px !important;
 
 }
 .slick-prev{
   z-index:1;
 }
-.sliderContainer >  .slick-prev{
-  left:-60px !important; 
+  .slick-prev{
+  left:0px !important; 
  }
