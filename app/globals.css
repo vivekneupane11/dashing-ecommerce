@@ -78,7 +78,7 @@ nav {
 
 main {
   position: absolute;
-  top: 16vh;
+  top: 15vh;
   background: #fff;
   width: 95%;
   margin-left: 2.5%;
@@ -121,4 +121,10 @@ z-index:6000;
 }
   .slick-prev{
   left:0px !important; 
+ }
+
+ @media (min-width:650px){
+  main{
+    top:16vh;
+  }
  }
