@@ -30,7 +30,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  justify-content:center;
+  justify-content:space-evenly;
 }
 .categoryContainer {
   margin: 5px 0;
@@ -96,6 +96,10 @@ max-width:150px;
     } */
     .categoryTitle{
       font-size:1rem;
+    }
+    .categoryGrid{
+padding:0;
+justify-content:center;
     }
   }
   /* For Desktops */
