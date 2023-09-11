@@ -1,4 +1,4 @@
-import image from "@/public/category.webp";
+import image from "@/public/category.jpg";
 import jewellery from "@/public/category/Jewellery.jpg";
 import mens from "@/public/category/mens.jpg";
 import shoes from "@/public/category/shoes.jpg";
