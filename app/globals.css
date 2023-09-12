@@ -128,3 +128,9 @@ z-index:6000;
     top:17.5vh;
   }
  }
+
+ @media ((min-width:500px) and  (max-width:900px)){
+  main{
+    top:20.5vh;
+  }
+ }
