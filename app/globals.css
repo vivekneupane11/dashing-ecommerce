@@ -129,7 +129,12 @@ z-index:6000;
   }
  }
 
- @media (orientation: landscape) {
+ @media (min-width:650px) and (max-width:1025px) {
+  main{
+    top:10.5vh;
+  }
+ }
+ @media (orientation: landscape) and (max-width:1025px) {
  main{
   top:22vh;
  }
