@@ -78,7 +78,7 @@ nav {
 
 main {
   position: absolute;
-  top: 12.5vh;
+  top: 14vh;
   background: #fff;
   width: 95%;
   margin-left: 2.5%;
@@ -123,14 +123,14 @@ z-index:6000;
   left:0px !important; 
  }
 
- @media (min-width:500px){
+ @media (min-width:650px){
   main{
     top:17.5vh;
   }
  }
 
- @media ((min-width:500px) and  (max-width:900px)){
-  main{
-    top:18.5vh;
-  }
+ @media (orientation: landscape) {
+ main{
+  top:22vh;
  }
+}
