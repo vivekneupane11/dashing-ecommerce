@@ -78,7 +78,7 @@ nav {
 
 main {
   position: absolute;
-  top: 12vh;
+  top: 12.5vh;
   background: #fff;
   width: 95%;
   margin-left: 2.5%;
@@ -125,6 +125,6 @@ z-index:6000;
 
  @media (min-width:500px){
   main{
-    top:17vh;
+    top:17.5vh;
   }
  }
