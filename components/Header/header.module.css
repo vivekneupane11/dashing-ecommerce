@@ -91,9 +91,7 @@ font-size:1.2rem;
 /* For Tables */
 @media (min-width: 1024px) {
 
-  .categoryLinks {
-    display: flex;
-  }
+ 
   .rightSection {
     display: flex;
   }
@@ -106,6 +104,8 @@ font-size:1.2rem;
 
 /* For Larger Devices @desktops */
 @media (min-width: 1200px) {
- 
+  .categoryLinks {
+    display: flex;
+  }
  
 }
