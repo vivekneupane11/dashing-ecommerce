@@ -71,10 +71,10 @@ export default function Product({ params }: { params: { id: string } }) {
               </div>
               <div className={styles.description}>
                 <p>
-                  <strong>Descriptions : </strong>There's a wooden gbox that
-                  comes out with the watchThere's a wooden golden plate box that
-                  comes out with the watchThere's a wooden golden plate box that
-                  comes out with the watchThere's a wooden golden plated shinged
+                  <strong>Descriptions : </strong>There a wooden gbox that
+                  comes out with the watchThere a wooden golden plate box that
+                  comes out with the watchThere a wooden golden plate box that
+                  comes out with the watchThere a wooden golden plated shinged
                   color box that comes out with the watch.
                 </p>
               </div>

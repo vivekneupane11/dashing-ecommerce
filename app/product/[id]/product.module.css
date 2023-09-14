@@ -69,6 +69,7 @@ font-size:0.9rem;
         display:block;
         height:30px;
         width:30px;
+        cursor:pointer;
         margin:0 10px;
         border-radius:100%;
         -webkit-box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
@@ -80,12 +81,15 @@ font-size:0.9rem;
     .varientsizes section{
         display:flex;
         padding:1rem 0rem;
+
+        
     }
 
     .varientsizes span{
         font-size:1.3rem;
         color:gray;
         padding: 0.2rem 1rem;
+        cursor:pointer;
     }
     .productAction{
         margin:25px 0;
