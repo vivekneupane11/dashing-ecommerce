@@ -49,7 +49,7 @@ export default async function  Header() {
            </section>
           </span>
         </section>
-        <h3 className={styles.heading}>NEPALONLINESTORE</h3>
+        <h3 className={styles.heading}>SHOPPER</h3>
 
         <section className={styles.rightSection}>
           <svg
