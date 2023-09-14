@@ -111,9 +111,7 @@ export default async function  Header() {
              {
               categories.map((category:string,i:number)=><li key={category+i} className={styles.categoryLink}>{category}</li>)
              }
-               {
-              ["Make Up","Shoes"].map((category:string,i:number)=><li key={category} className={styles.categoryLink}>{category}</li>)
-             }
+              
               </ul>  
              
           </section>
