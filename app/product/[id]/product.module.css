@@ -191,3 +191,120 @@ font-size:0.9rem;
     .icon{
         margin-right:10px;
     }
+
+    .productDescriptions {
+       
+      }
+      .productDescriptionContainer {
+        @include flexbox(column, flex-start, flex-start);
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:flex-start;
+     
+      }
+      .productDescriptionTitles {
+        margin: 2rem 0px 0 0;
+        border-bottom: 1px solid #fdf7f7;
+        border-top: 1px solid #fdf7f7;
+        width: 100%;
+        position: relative;
+    
+      }
+      .productDescriptionContainer ul{
+        
+            margin-left: 60px;
+            display:flex;
+            flex-direction:row;
+            justify-content:flex-start;
+            align-items:center;
+        
+      }
+
+      .productDescriptionContainer ul li{
+            padding: 20px 30px 20px 0;
+
+            letter-spacing: 1px;
+            font-weight: 400;
+            color: #c7abab;
+            position: relative;
+          
+     
+      }
+
+     .activeLink       {
+        text-shadow: 1px 0px rgb(57, 88, 216);
+       
+      }
+    .activeLink::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #3958d8;
+            position: absolute;
+            box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
+            top: 55px;
+            left: 5px;
+          }
+    
+    .shareButton {
+      position: absolute;
+      top: -45%;
+      right: 5%;
+      background-color: rgb(250, 199, 78);
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      @include flexbox(row, center, center);
+      @include boxShadow();
+    }
+      .reviewContainer {
+        background-color: rgb(248, 248, 248);
+  
+       
+      }
+      .reviewContainer h4{
+        font-size:1.6rem;
+      }
+      .reviewContainer ul{
+            margin: 15px 60px;
+          display:flex;
+          flex-direction:column;
+          justify-content:flex-start;
+          align-items:flex-start;
+      }
+      .reviewContainer ul li {
+     
+            padding: 3px 0;
+            display:flex;
+            justify-content:flex-start;
+            align-items:flex-start;
+           
+            color:#000;
+           
+        
+      }
+      .reviewContainer ul li p{
+        font-size:1rem;
+        letter-spacing:normal;
+        font-weight:400;
+      }
+      .reviewContainer ul li span{
+            padding-right: 6px;
+            padding-top: 1px;
+          
+      }
+      .productGrid {
+        margin: 2rem 60px 3rem 60px;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:flex-start;
+       
+        }
+        .gridTitle{
+                
+                  margin-bottom: 15px;
+            
+        }

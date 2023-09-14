@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Frank_Ruhl_Libre } from 'next/font/google'
 import './globals.css'
 
-const frank_Ruhl_Libre = Frank_Ruhl_Libre({ subsets: ['latin'] })
+const frank_Ruhl_Libre = Frank_Ruhl_Libre({ subsets: ['latin'],weight:["300","400","500","600","700","800","900"] })
 
 export const metadata: Metadata = {
   title: 'Dashing Fashion Store',
