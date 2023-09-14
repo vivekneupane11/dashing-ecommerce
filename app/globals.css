@@ -125,6 +125,12 @@ z-index:6000;
   left:0px !important; 
  }
 
+ @media (min-width: 650px) {
+  main{
+    top:100px;
+  }
+   }
+
  @media (min-width: 1200px) {
 main{
   top:130px;
