@@ -78,7 +78,8 @@ nav {
 
 main {
   position: absolute;
-  top: 14vh;
+  /* top:14vh; */
+  top: 90px;
   background: #fff;
   width: 95%;
   margin-left: 2.5%;
@@ -123,7 +124,12 @@ z-index:6000;
   left:0px !important; 
  }
 
- @media (min-width:650px){
+ @media (min-width: 1024px) {
+main{
+  top:130px;
+}
+ }
+ /* @media (min-width:650px){
   main{
     top:17.5vh;
   }
@@ -138,4 +144,4 @@ z-index:6000;
  main{
   top:22vh;
  }
-}
+} */
