@@ -482,7 +482,7 @@ export default async function Product({ params }: { params: { id: string } }) {
               for you to choose
             </h2>
           <div className={styles.productGrid}>
-          {products.map((product: any, i) => (
+          {products.map((product: any, i:number) => (
           <ProductCard
             key={i}
             title={product.title}
