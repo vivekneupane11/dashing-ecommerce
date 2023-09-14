@@ -94,6 +94,7 @@ button {
 }
 
 /* Overriding Slick Carousel Buttons Css Styles */
+/*Here*/
 .slick-prev:before {
   color: #080f2d !important;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
