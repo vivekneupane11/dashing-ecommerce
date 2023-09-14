@@ -297,16 +297,19 @@ font-size:0.9rem;
             padding-top: 1px;
           
       }
-      .productGrid {
+      .productGridContainer{
         margin: 2rem 60px 3rem 60px;
+
+      }
+      .productGrid {
         display:flex;
-        flex-direction:column;
-        justify-content:flex-start;
+        flex-direction:row;
+        justify-content:space-around;
         align-items:flex-start;
+        flex-wrap:wrap;
        
         }
         .gridTitle{
-                
                   margin-bottom: 15px;
-            
+                font-size:1.4rem;
         }

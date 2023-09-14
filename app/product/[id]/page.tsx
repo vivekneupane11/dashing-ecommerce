@@ -1,8 +1,11 @@
 import Category from "@/components/Category";
 import Footer from "@/components/Footer";
+import ProductCard from "@/components/ProductCards";
 import Image from "next/image";
 import styles from "./product.module.css";
-export default function Product({ params }: { params: { id: string } }) {
+export default async function Product({ params }: { params: { id: string } }) {
+ const products = await (await fetch("https://fakestoreapi.com/products?limit=15")).json()
+
   return (
     <main>
       <div className={styles.viewProductContainer}>
@@ -468,24 +471,31 @@ export default function Product({ params }: { params: { id: string } }) {
           </div>
         </div>
 
-        <div className={styles.productGrid}>
-          <div>
+        <div className={styles.productGridContainer}>
             <h2 className={styles.gridTitle}>
               More
-              <p
-                style={{ color: "#3958D8", fontSize: "24px", padding: "0 3px" }}
+              <span
+                style={{ color: "#3958D8", fontSize: "2rem", padding: "0 10px" }}
               >
                 WATCHES
-              </p>
+              </span>
               for you to choose
             </h2>
+          <div className={styles.productGrid}>
+          {products.map((product: any, i) => (
+          <ProductCard
+            key={i}
+            title={product.title}
+            price={product.price}
+            image={product.image}
+            category={product.category}
+          />
+        ))}
           </div>
-          <div className={styles.productGrid}>{/* {CardList} */}</div>
         </div>
       </div>
       <Category />
 
-      <h1>Param: {params.id}</h1>
 
       <Footer />
     </main>
