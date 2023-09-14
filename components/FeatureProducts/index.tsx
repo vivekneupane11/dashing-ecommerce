@@ -86,7 +86,7 @@ export default function FeatureProducts({ title }: { title: string }) {
     {
       isLoading ? 'loading':  <section className={styles.sliderContainer}>
       <Slider {...settings}>
-        {products.map((product: any, i) => (
+        {products.map((product: any, i:number) => (
           <ProductCard
             key={i}
             title={product.title}
