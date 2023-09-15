@@ -59,7 +59,7 @@ export default async function Product({ params }: { params: { id: string } }) {
           </div>
           <div className={styles.productDetails}>
             <div className={styles.detailContent}>
-              <strong className={styles.productCategory}>{product.category}</strong>
+              <strong className={styles.productCategory}><b>{product.category}</b></strong>
               <h2>{product.title}</h2>
               <div className={styles.reviews}>
                 <strong>
