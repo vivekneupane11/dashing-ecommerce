@@ -89,6 +89,7 @@ export default function FeatureProducts({ title }: { title: string }) {
         {products.map((product: any, i:number) => (
           <ProductCard
             key={i}
+            id={product.id}
             title={product.title}
             price={product.price}
             image={product.image}

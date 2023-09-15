@@ -4,7 +4,14 @@ import ProductCard from "@/components/ProductCards";
 import Image from "next/image";
 import styles from "./product.module.css";
 export default async function Product({ params }: { params: { id: string } }) {
- const products = await (await fetch("https://fakestoreapi.com/products?limit=15")).json()
+  const product = await (
+    await fetch(`https://fakestoreapi.com/products/${params.id}`)
+  ).json();
+  console.log("🚀 ~ file: page.tsx:11 ~ Product ~ product:", product);
+
+  const products = await (
+    await fetch("https://fakestoreapi.com/products?limit=15")
+  ).json();
 
   return (
     <main>
@@ -13,36 +20,36 @@ export default async function Product({ params }: { params: { id: string } }) {
           <div className={styles.productImageContainer}>
             <div className={styles.productImage}>
               <Image
-                src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+                src={product.image}
                 alt="tv"
-                height={400}
-                width={450}
+                fill
+                style={{ objectFit: "contain" }}
               />
             </div>
             <div className={styles.productImages}>
               <Image
-                src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+                src={product.image}
                 alt="tv"
                 height={60}
                 width={60}
                 className={styles.galleryImage}
               />
               <Image
-                src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+                src={product.image}
                 alt="tv"
                 height={60}
                 width={60}
                 className={styles.galleryImage}
               />
               <Image
-                src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+                src={product.image}
                 alt="tv"
                 height={60}
                 width={60}
                 className={styles.galleryImage}
               />
               <Image
-                src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+                src={product.image}
                 alt="tv"
                 height={60}
                 width={60}
@@ -52,8 +59,8 @@ export default async function Product({ params }: { params: { id: string } }) {
           </div>
           <div className={styles.productDetails}>
             <div className={styles.detailContent}>
-              <strong>LIFESTYLE</strong>
-              <h2>ROYAL ROLEX WATCHES</h2>
+              <strong className={styles.productCategory}>{product.category}</strong>
+              <h2>{product.title}</h2>
               <div className={styles.reviews}>
                 <strong>
                   <svg
@@ -136,11 +143,7 @@ export default async function Product({ params }: { params: { id: string } }) {
               </div>
               <div className={styles.description}>
                 <strong>
-                  <b>Descriptions : </b>There a wooden gbox that comes out with
-                  the watchThere a wooden golden plate box that comes out with
-                  the watchThere a wooden golden plate box that comes out with
-                  the watchThere a wooden golden plated shinged color box that
-                  comes out with the watch.
+                  <b>Descriptions : </b>{product.description}
                 </strong>
               </div>
               <div className={styles.varients}>
@@ -165,7 +168,7 @@ export default async function Product({ params }: { params: { id: string } }) {
                 </div>
               </div>
               <div className={styles.productAction}>
-                <span className={styles.productPrice}>$250.00</span>
+                <span className={styles.productPrice}>${product.price}</span>
                 <span className={styles.productPrevPrice}>$350.00</span>
                 <span className={styles.productSale}>-30%</span>
               </div>
@@ -472,30 +475,30 @@ export default async function Product({ params }: { params: { id: string } }) {
         </div>
 
         <div className={styles.productGridContainer}>
-            <h2 className={styles.gridTitle}>
-              More
-              <span
-                style={{ color: "#3958D8", fontSize: "2rem", padding: "0 10px" }}
-              >
-                WATCHES
-              </span>
-              for you to choose
-            </h2>
+          <h2 className={styles.gridTitle}>
+            More
+            <span
+              style={{ color: "#3958D8", fontSize: "2rem", padding: "0 10px" }}
+            >
+              WATCHES
+            </span>
+            for you to choose
+          </h2>
           <div className={styles.productGrid}>
-          {products.map((product: any, i:number) => (
-          <ProductCard
-            key={i}
-            title={product.title}
-            price={product.price}
-            image={product.image}
-            category={product.category}
-          />
-        ))}
+            {products.map((product: any, i: number) => (
+              <ProductCard
+                key={i}
+                id={product.id}
+                title={product.title}
+                price={product.price}
+                image={product.image}
+                category={product.category}
+              />
+            ))}
           </div>
         </div>
       </div>
       <Category />
-
 
       <Footer />
     </main>

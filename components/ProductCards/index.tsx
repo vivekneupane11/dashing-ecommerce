@@ -1,15 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./productcard.module.css";
 
 type ProductCardProps = {
 title:string,
 price:number,
 image:string,
-category:string
+category:string,
+id:number | string
 }
-export default function ProductCard({title,price,image,category}:ProductCardProps) {
+export default function ProductCard({title,price,image,category,id}:ProductCardProps) {
   return (
-    <div className={styles.productCard}>
+    <Link href={`/product/${id}`} className={styles.productCard}>
       <span className={styles.sticker}>sale</span>
       <Image
         className={styles.productImage}
@@ -85,6 +87,6 @@ export default function ProductCard({title,price,image,category}:ProductCardProp
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
