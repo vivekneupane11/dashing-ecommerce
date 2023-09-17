@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import ProductCard from "../ProductCards";
+import Skeleton from "../Skeleton";
 import styles from "./featureproducts.module.css";
 
 export default function FeatureProducts({ title }: { title: string }) {
@@ -84,7 +85,7 @@ export default function FeatureProducts({ title }: { title: string }) {
         <h3 className={styles.featureTitle}>{title}</h3>
       </div>
     {
-      isLoading ? 'loading':  <section className={styles.sliderContainer}>
+      isLoading ? <Skeleton height="300px" />:  <section className={styles.sliderContainer}>
       <Slider {...settings}>
         {products.map((product: any, i:number) => (
           <ProductCard
