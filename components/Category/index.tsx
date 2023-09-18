@@ -5,6 +5,7 @@ import shoes from "@/public/category/shoes.jpg";
 import watches from "@/public/category/watches.jpg";
 import womens from "@/public/category/women-category.jpg";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./category.module.css";
 
 const categoryImages = [
@@ -35,7 +36,7 @@ export default async function Category() {
         <section className={styles.categoryGrid}>
           <section className={styles.categoryGrid}>
             {[...categories, ...categories].map((category, i) => (
-              <div key={category} className={styles.categoryContainer}>
+              <Link href={`/categories/${category}`} key={category} className={styles.categoryContainer}>
                 <div className={styles.categoryBox}>
                   <Image
                     src={categoryImages[i]}
@@ -48,7 +49,7 @@ export default async function Category() {
                     <p className={styles.productCount}>{Math.floor(Math.random() * 100)} PRODUCTS</p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </section>
         </section>

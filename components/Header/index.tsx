@@ -1,13 +1,13 @@
 import Link from "next/link";
 import styles from "./header.module.css";
 
-export default async function  Header() {
-  const res = await fetch('https://fakestoreapi.com/products/categories')
-  const categories = await res.json()
-  if(!res.ok){
-    throw new Error("No Categories Found")
+export default async function Header() {
+  const res = await fetch("https://fakestoreapi.com/products/categories");
+  const categories = await res.json();
+  if (!res.ok) {
+    throw new Error("No Categories Found");
   }
-  
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -35,8 +35,8 @@ export default async function  Header() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="#fff"
-              height={'23px'}
-              width={'23px'}
+              height={"23px"}
+              width={"23px"}
             >
               <path
                 strokeLinecap="round"
@@ -44,13 +44,16 @@ export default async function  Header() {
                 d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
               />
             </svg>
-           <section className={styles.categoryLabelGroup}>
-           <strong className={styles.categoryLabel}>select</strong>
-            <strong className={styles.categoryLabel}>Categories</strong>
-           </section>
+            <section className={styles.categoryLabelGroup}>
+              <strong className={styles.categoryLabel}>select</strong>
+              <strong className={styles.categoryLabel}>Categories</strong>
+            </section>
           </span>
         </section>
-        <h3 className={styles.heading}>SHOPPER</h3>
+        <Link href="/">
+          {" "}
+          <h3 className={styles.heading}>SHOPPER</h3>
+        </Link>
 
         <section className={styles.rightSection}>
           <svg
@@ -104,18 +107,20 @@ export default async function  Header() {
           </svg>
         </section>
       </nav>
-      <section >
-            <ul className={styles.categoryLinks}>
-             {
-              categories.map((category:string,i:number)=><Link key={category+i} href={`/categories/${category}`}><li  className={styles.categoryLink}>{category}</li></Link>)
-             }
-             {
-              categories.map((category:string,i:number)=><Link key={category+i} href={`/categories/${category}`}><li  className={styles.categoryLink}>{category}</li></Link>)
-             }
-              
-              </ul>  
-             
-          </section>
+      <section>
+        <ul className={styles.categoryLinks}>
+          {categories.map((category: string, i: number) => (
+            <Link key={category + i} href={`/categories/${category}`}>
+              <li className={styles.categoryLink}>{category}</li>
+            </Link>
+          ))}
+          {categories.map((category: string, i: number) => (
+            <Link key={category + i} href={`/categories/${category}`}>
+              <li className={styles.categoryLink}>{category}</li>
+            </Link>
+          ))}
+        </ul>
+      </section>
     </header>
   );
 }
