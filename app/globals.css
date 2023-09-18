@@ -85,14 +85,26 @@ main {
   margin-left: 2.5%;
   -webkit-box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
-  z-index:1;
+  z-index: 1;
 }
 
 button {
   font-family: __Frank_Ruhl_Libre_Fallback_d63ab4,
     __Frank_Ruhl_Libre_Fallback_Fallback_d63ab4;
 }
-
+input[type="number"] {
+  padding: 10px;
+  margin: 10px;
+  width: 120px;
+  border: none;
+  outline: none;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background:#fbfbfb;
+}
+input[type="range"] {
+  width: 200px;
+}
 /* Overriding Slick Carousel Buttons Css Styles */
 /*Here*/
 .slick-prev:before {
@@ -100,43 +112,41 @@ button {
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
 
   -webkit-box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
-  font-size:28px !important;
-  padding:10px 7px;
-  z-index:6000;
+  font-size: 28px !important;
+  padding: 10px 7px;
+  z-index: 6000;
 }
 .slick-next:before {
   color: #080f2d !important;
   z-index: 1000 !important;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
-font-size:28px !important;
-padding:10px 7px;
-z-index:6000;
-
+  font-size: 28px !important;
+  padding: 10px 7px;
+  z-index: 6000;
 }
-.slick-next{
-  right:20px !important;
-
+.slick-next {
+  right: 20px !important;
 }
-.slick-prev{
-  z-index:1;
+.slick-prev {
+  z-index: 1;
 }
-  .slick-prev{
-  left:0px !important; 
- }
+.slick-prev {
+  left: 0px !important;
+}
 
- @media (min-width: 650px) {
-  main{
-    top:100px;
+@media (min-width: 650px) {
+  main {
+    top: 100px;
   }
-   }
-
- @media (min-width: 1200px) {
-main{
-  top:140px;
 }
- }
- /* @media (min-width:650px){
+
+@media (min-width: 1200px) {
+  main {
+    top: 140px;
+  }
+}
+/* @media (min-width:650px){
   main{
     top:17.5vh;
   }
