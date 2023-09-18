@@ -48,13 +48,14 @@
   margin: 10px 0;
 }
 .productDetails {
-  margin-left: 2rem;
+  margin-left: 0.5rem;
 
 }
 @media (min-width: 1024px) {
   .productDetails {
     width: 55%;
     padding:0 2rem;
+    margin-left: 2rem;
 
   }
 }
