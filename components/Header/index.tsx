@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./header.module.css";
 
 export default async function  Header() {
@@ -106,10 +107,10 @@ export default async function  Header() {
       <section >
             <ul className={styles.categoryLinks}>
              {
-              categories.map((category:string)=><li key={category} className={styles.categoryLink}>{category}</li>)
+              categories.map((category:string,i:number)=><Link key={category+i} href={`/categories/${category}`}><li  className={styles.categoryLink}>{category}</li></Link>)
              }
              {
-              categories.map((category:string,i:number)=><li key={category+i} className={styles.categoryLink}>{category}</li>)
+              categories.map((category:string,i:number)=><Link key={category+i} href={`/categories/${category}`}><li  className={styles.categoryLink}>{category}</li></Link>)
              }
               
               </ul>  

@@ -7,7 +7,7 @@ export default async function Product({ params }: { params: { id: string } }) {
   const product = await (
     await fetch(`https://fakestoreapi.com/products/${params.id}`)
   ).json();
-  console.log("🚀 ~ file: page.tsx:11 ~ Product ~ product:", product);
+
 
   const products = await (
     await fetch("https://fakestoreapi.com/products?limit=15")

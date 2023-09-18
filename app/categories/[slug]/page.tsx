@@ -11,7 +11,7 @@ export default async function Category({
   const products = await (
     await fetch(`https://fakestoreapi.com/products/category/${params.slug}`)
   ).json();
-  console.log("🚀 ~ file: page.tsx:5 ~ Category ~ products:", products);
+ 
   return (
     <main>
       <BannerSlider />
