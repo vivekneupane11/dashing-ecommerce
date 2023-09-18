@@ -11,8 +11,8 @@ id:number | string
 }
 export default function ProductCard({title,price,image,category,id}:ProductCardProps) {
   return (
-    <div className={styles.productCard}>
-    <Link href={`/product/${id}`} >
+ <div className={styles.container}>
+     <Link href={`/product/${id}`} className={styles.productCard}>
       <span className={styles.sticker}>sale</span>
       <Image
         className={styles.productImage}
@@ -26,11 +26,12 @@ export default function ProductCard({title,price,image,category,id}:ProductCardP
         <h2 className={styles.productName}>{title}</h2>
         <strong className={styles.productPrice}>Rs: {price}</strong>
       </div>
-   
-    </Link>
-    <div className={styles.hoverCard}>
+      <div className={styles.hoverCard}>
         <span className={styles.hoverCategory}>{category}</span>
-        <div className={styles.buttonActions}>
+      
+      </div>
+    </Link>
+    <div className={styles.buttonActions}>
           <span className={styles.iconWrapper}>
             <span className={styles.tooltip}>Cart</span>{" "}
             <svg
@@ -71,8 +72,7 @@ export default function ProductCard({title,price,image,category,id}:ProductCardP
           </span>
           <span className={styles.iconWrapper}>
             <span className={styles.tooltip}>View</span>
-           <Link href={`/product/${id}`} >
-           <svg
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -88,12 +88,8 @@ export default function ProductCard({title,price,image,category,id}:ProductCardP
                 d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25"
               />
             </svg>
-           </Link>
           </span>
         </div>
-  
-      </div>
-    </div>
-
+ </div>
   );
 }
