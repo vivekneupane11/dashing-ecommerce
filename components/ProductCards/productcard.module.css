@@ -85,7 +85,7 @@
   opacity:0;
   transition:0.2s all ease-in-out;
   display:flex;
-  transform:scale(0)
+  transform:scale(0);
 }
 @media (min-width:650px){
   .container:hover .buttonActions{
