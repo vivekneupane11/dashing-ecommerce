@@ -5,6 +5,12 @@
 .cart__shipping__form {
   display: flex;
   justify-content: space-evenly;
+  flex-direction:column;
+}
+@media (min-width:650px){
+    .cart__shipping__form {
+    flex-direction:row;
+    }
 }
 .form_group {
   display: flex;
@@ -85,20 +91,30 @@ a.forget_password {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  padding: 3rem 3rem 3.43rem 0;
   border-right: 1px solid #fdf7f7;
 }
+@media (min-width:650px){
+    .shipping__form__signin {
+        width: 40%;
+        padding: 3rem 3rem 3.43rem 0;
 
+    }
+}
 .shipping__form__signup {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40.4%;
   position: relative;
+  padding:2rem 1rem;
 }
+@media (min-width:650px){
+    .shipping__form__signup {
+        width: 40.4%;
+        padding:0;
 
+    }
+}
 .form_group:nth-child(2n) {
   border-left: 1px solid #ececec;
 }

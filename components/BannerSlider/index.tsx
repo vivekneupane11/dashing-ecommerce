@@ -2,6 +2,7 @@
 import banner from "@/public/bannerHome.png";
 import bannertwo from "@/public/bannertwo.png";
 import Image from "next/image";
+import Link from "next/link";
 import Slider from "react-slick";
 import styles from "./bannerslider.module.css";
 export default function BannerSlider() {
@@ -26,7 +27,7 @@ export default function BannerSlider() {
                 <h6 className={styles.bannerHeader}>
                   New Designs Affordable Price
                 </h6>
-                <button className={styles.bannerButton}>View Products</button>
+                <Link href={'/product/6'} className={styles.bannerButton}>View Products</Link>
               </article>
               <Image
                 src={bannertwo}
@@ -42,7 +43,7 @@ export default function BannerSlider() {
                 <h6 className={styles.bannerHeader}>
                   New Designs with Affordable Price
                 </h6>
-                <button className={styles.bannerButton}>View Products</button>
+                <Link href={'/product/6'} className={styles.bannerButton}>View Products</Link>
               </article>
               <Image
                 src={banner}

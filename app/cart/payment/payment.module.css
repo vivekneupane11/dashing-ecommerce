@@ -4,9 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 0.5rem;
   }
-  
+  @media (min-width:650px){
+    .paymentPage {
+        padding: 2rem;
+      }
+  }
  .pageTitle  {
     font-size: 24px;
     margin-bottom: 1rem;
@@ -15,9 +19,14 @@
   .paymentOptions {
     display: flex;
     flex-direction: row;
-    width: 50%;
     margin-bottom: 1rem;
     justify-content: space-between;
+  }
+  @media (min-width:650px){
+    .paymentOptions {
+        width: 50%;
+
+    }
   }
   
   .optionLabel {
@@ -37,9 +46,13 @@
     padding: 2rem;
     border-radius: 5px;
     max-width:600px;
-    width:70%;
   }
-  
+  @media (min-width:650px){
+    .paymentOptions {
+        width:70%;
+
+    }
+  }
   .paypalContainer {
 max-width:600px;
 width:70%;
@@ -93,6 +106,7 @@ margin:3rem 0;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width:180px;    
   }
   
   .payButton {

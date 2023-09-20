@@ -39,7 +39,8 @@
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08);
   color: #fff;
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  text-align:center;
   width: 170px;
   cursor: pointer;
   font-family: __Frank_Ruhl_Libre_Fallback_d63ab4,
