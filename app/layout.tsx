@@ -2,12 +2,14 @@ import Header from '@/components/Header'
 import type { Metadata } from 'next'
 import { Frank_Ruhl_Libre } from 'next/font/google'
 import './globals.css'
-
 const frank_Ruhl_Libre = Frank_Ruhl_Libre({ subsets: ['latin'],weight:["300","400","500","600","700","800","900"] })
 
 export const metadata: Metadata = {
   title: 'Dashing Fashion Store',
   description: 'A fashion store app built with next.js',
+  openGraph:{
+    images:'https://i.ibb.co/KykV7Kj/Untitled-design.png'
+  }
 }
 
 export default function RootLayout({
