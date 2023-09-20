@@ -10,6 +10,12 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap:wrap;
+    flex-direction:column;
+  }
+  @media (min-width:650px){
+    .cart__header ul{
+flex-direction:row;
+    }
   }
 
   .navItem {
@@ -22,6 +28,7 @@
     display: flex;
     align-items: center;
     justify-content:center;
+    width:100%;
   }
   
   .icon {

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import styles from './payment.module.css';
 
 const PaymentPage = () => {
-  const [selectedPayment, setSelectedPayment] = useState('creditCard');
+  const [selectedPayment, setSelectedPayment] = useState('paypal');
 
   const handlePaymentChange = (option:any) => {
     setSelectedPayment(option);
