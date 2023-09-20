@@ -1,24 +1,28 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './cart.module.css';
-export default function Cart() {
+export default async function Cart() {
+  const products = await (
+    await fetch(`https://fakestoreapi.com/products/category/women's clothing`)
+  ).json();
+  console.log("🚀 ~ file: page.tsx:8 ~ Cart ~ products:", products)
   return (
     <div className={styles.cartList}>
     <div className={styles.cartListProducts}>
     {
-        [1,2,3,4,5].map((e:number) =>  
-          <div key={e} className={styles.cartProductList}>
+        products.map((product:any) =>  
+          <div key={product.id} className={styles.cartProductList}>
             <div className={styles.cartProductImage}>
-              <Image src={'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg'} alt="Shoes" width={130} height={110} />
+              <Image src={product.image} alt="Shoes" style={{objectFit:'contain'}} width={130} height={110} />
             </div>
             <div className={styles.cartDetails}>
               <div className={styles.productName}>
-                <h4>Jordan Galaxy</h4>
+                <h4>{product.title.replace(/(.{20})..+/, "$1…")}</h4>
                 <strong>LIFESTYLE</strong>
               </div>
             </div>
             <div className={styles.cartProductPrice}>
-              <span>$ 688.08</span>
+              <span>$ {product.price}</span>
             </div>
             <div className={styles.cartProductAction}>
               <span>-</span>
@@ -26,7 +30,7 @@ export default function Cart() {
               <span>+</span>
             </div>
             <div className={styles.cartProductTotalPrice}>
-              <span>$ 688.08</span>
+              <span>$ {product.price}</span>
             </div>
             <div className={styles.cartClose}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" height={20} width={20}>
