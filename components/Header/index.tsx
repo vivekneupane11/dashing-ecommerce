@@ -56,7 +56,7 @@ export default async function Header() {
         </Link>
 
         <section className={styles.rightSection}>
-          <Link href="/cart">
+          <Link href="/profile">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
